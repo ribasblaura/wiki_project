@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marcação</title>
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="Imagens/PNG/favicon.png" type="image/png">
+    
+    </head>
+    <body class="fade">
+    
+        <!-- Menu -->
+        <header class="bg-header">
+            <div class="menu-header">
+    
+            <!-- Ícone do Menu Mobile -->
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+            <!-- Menu de Navegação -->
+                <nav id="nav-menu">
+                    <ul class="menu-list">
+                        <li><a href="index.html" class="menu-item">Página Inicial</a></li>
+                        <li><a href="producao.html" class="menu-item">Produção</a></li>
+                        <li><a href="marcacao.html" class="menu-item">Marcação</a></li>
+                        <li><a href="atendimento.html" class="menu-item">Atendimento</a></li>
+                        <li><a href="recorte.html" class="menu-item">Recorte Digital</a></li>
+                        <li><a href="duvidas.html" class="menu-item">Dúvidas Frequentes</a></li>
+                    </ul>
+                </nav>
+            </div>
+                <a href="#" class="back-to-top">↑</a>
+        </header>
+        <div class="faq-container">
+            <h2>Marca&ccedil;&atilde;o</h2>
+            <div class="faq-item">
+                <div class="faq-question">1. O que é a Marcação?</div>
+                <div class="faq-answer">A marcação é o processo de estabelecer regras para separar cada especificação nos cadernos. Marcamos tudo, incluindo rodapés e índices, mesmo que não queiramos que apareçam junto às matérias.</div>
+            </div>	
+           
+            <div class="faq-item">       
+                <div class="faq-question">2. Como verificar marcações erradas?</div>
+                <div class="faq-answer">Se houver uma marcação errada, verifique se a regra está afetando outros locais no caderno, localizando todos os itens no documento. Isso ajudará a identificar os afetados pela regra.</div>
+            </div>
+        
+            <div class="faq-item">       
+                <div class="faq-question">3. Sistema de Regras de Marcação</div>
+                    <div class="faq-answer">As marcações seguem uma hierarquia definida. Abaixo estão as regras e suas funções: <br>
+                        
+                        <ul>
+                            <li><b>MSSQUEBRATRIBUNAL((12345))</b>
+                                <ul>
+                                    <li>Marca todos os tribunais do caderno.</li>
+                                    <li>Se marcada incorretamente, pode cortar a matéria e interromper marcações anteriores.</li>
+                                    <li><i>Observação:</i> Marca apenas o que estiver escrito na linha.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            
+                            <li><b>MSSQUEBRACIDADE((12345))</b>
+                                <ul>
+                                    <li>Marca todas as cidades do caderno.</li>
+                                    <li>Interage apenas com a marcação de tribunal.</li>
+                                    <li><i>Observação:</i> Marca apenas o que estiver escrito na linha.</li>
+                                </ul>
+                            </li>
+                            <br>
+                           
+                            <li><b>MSSQUEBRAVARA((12345))</b>
+                                <ul>
+                                    <li>Marca todas as varas do caderno.</li>
+                                    <li>Pode interromper marcações anteriores se marcada incorretamente.</li>
+                                    <li><i>Observação:</i> Junta-se a outra marcação de vara se estiver abaixo dela.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            
+                            <li><b>MSSPAUTA((12345))</b>
+                                <ul>
+                                    <li>Marca todas as pautas do caderno.</li>
+                                    <li>Pode interromper marcações anteriores se marcada incorretamente.</li>
+                                    <li><i>Observação:</i> Limite de 2400 caracteres; excedendo isso, a pauta ficará incompleta.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            
+                            <li><b>MSSTITULOMATERIA((12345))</b>
+                                <ul>
+                                    <li>Marca os títulos das matérias.</li>
+                                    <li>Pode quebrar a matéria se marcada incorretamente.</li>
+                                    <li><i>Observação:</i> Marca apenas o que estiver escrito na linha.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            
+                            <li><b>MSSQUEBRAMATERIA((12345))</b>
+                                <ul>
+                                    <li>Marca todas as matérias do caderno.</li>
+                                    <li>Pode dividir a matéria em sequenciais se marcada incorretamente.</li>
+                                    <li><i>Observação:</i> Verifique os afetados.</li>
+                                </ul>
+                            </li>
+                            </br>
+                            
+                            <li><b>MSSQUEBRAINDICE((12345))</b>
+                                <ul>
+                                    <li>Marca todos os índices do caderno.</li>
+                                    <li>Pode dividir a matéria em sequenciais se marcada incorretamente.</li>
+                                    <li><i>Observação:</i> Verifique os afetados.</li>
+                                </ul>
+                            </li>
+                            <br>
+    
+                            <li><b>MSSQUEBRAINDICEFIM((12345))</b>
+                                <ul>
+                                    <li>Utilizada para evitar que uma matéria fique colada ao índice.</li>
+                                    <li>Gera um sequencial para identificação.</li>
+                                    <li><i>Observação:</i> A matéria acima do índice pode ficar incompleta.</li>
+                                 </ul>
+                            </li>
+                             </br>
+                            
+                            <li><b>MSSLIMPAPAUTA((12345))</b>
+                                <ul>
+                                    <li>Anula a pauta marcada para todas as matérias subsequentes.</li>
+                                    <li><i>Observação:</i> Verifique os afetados.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            
+                            <li><b>MSSNADA((12345))</b>
+                                <ul>
+                                    <li>Remove tudo que não desejamos, como cabeçalhos e rodapés.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li ><b>MSSPAUTABX((12345))</b>
+                                <ul>
+                                    <li>Marca informações que valem para todas as matérias acima, no final da última.</li>
+                                    <li>Funciona em casos específicos.</li>
+                                    <li><i>Observação:</i> Parada por uma regra de Pauta ou PautaBX.</li>
+                                </ul></ul>
+                            </li>
+                            <hr>
+                            <p><b>DICAS ADICIONAIS</b></p>
+                <ul>&rarr; Sempre verifique os afetados ao corrigir marcações.<br>
+                    &rarr; Mantenha um registro das marcações para faciultar a identificação de erros futuros.</ul>
+                    </div>
+                    </div>
+                    
+            <div class="faq-item">
+            <div class="faq-question">4. Relatório de Marcadores</div>
+            <div class="faq-answer">O Relatório de Marcadores tem como objetivo prevenir perdas e é dividido em três seções principais: Relatório Soltas e Coladas, Relatório de Índices e Relatório de Lixo Removido. Abaixo, você encontrará informações detalhadas sobre cada uma dessas seções:
+                <br><br>
+                <b>Relatório Soltas e Coladas</b><br>
+            <ul>
+                <li><b>Objetivo:</b> Prevenir perdas.</li>
+                <li><b>Link para o relatório:</b> <a href="http://webjur.com.br/tarefas/Conferencia.aspx" target="_blank">Relatório Soltas e Coladas</a>.</li>
+                <li><b>Como acessar:</b>
+                    <ol>
+                        <li>Acesse o link.</li>
+                        <li>Selecione "Soltas" ou "Coladas" e a data desejada.</li>
+                    </ol>
+                </li>
+                <li><b>Frequência de verificação:</b> O relatório é conferido uma vez por semana, sempre às quartas-feiras, utilizando a data do dia anterior (terça-feira) para garantir que todos os cadernos processados sejam considerados.</li>
+                <li><b>Procedimento ao encontrar um possível cliente:</b>
+                    <ul>
+                        <li>Verifique se o cliente está marcado.</li>
+                        <li>Se for cliente, inclua a matéria e solicite revisão da perda.</li>
+                    </ul>
+                </li>
+                <li><b>Observações importantes:</b>
+                    <ul>
+                        <li>Letras espaçadas: junte o cliente.</li>
+                        <li>Letras coladas: separe corretamente para que o sistema reconheça o cliente.</li>
+                        <li>Em casos com muitos erros, coloque o caderno em observação e verifique diariamente.</li>
+                    </ul>
+                </li>
+                <li><b>Links adicionais para pesquisa de clientes:</b>
+                    <ul>
+                        <li><a href="http://webjur.com.br/buscacliente.asp" target="_blank">Pesquisa de Clientes 1</a></li>
+                        <li><a href="http://tempestade.webjur.com.br/webjur/buscacliente.asp" target="_blank">Pesquisa de Clientes 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <hr>
+    
+            <b>Relatório de Índices</b>
+            <ul>
+                <li><b>Objetivo:</b> Conferir todos os índices excluídos no dia para verificar se alguma matéria foi excluída por engano.</li>
+                <li><b>Como funciona:</b> A conferência é realizada via email de Índices gerado diariamente após a liberação das empresas. As empresas são organizadas por código do jornal e email.</li>
+                <li><b>Como verificar possíveis perdas:</b>
+                    <ul>
+                        <li>Utilize o link de Matérias Excluídas: <a href="http://tempestade/webjur/VerMatExcluida.ASP" target="_blank">Matérias Excluídas</a>.</li>
+                        <li>Insira o sequencial do índice excluído e clique em "procurar".</li>
+                        <li>Se houver matéria excluída por engano e cliente afetado, inclua a matéria novamente e envie revisão.</li>
+                    </ul>
+                </li>
+                <li><b>Observação:</b> Se a matéria excluída tiver "MSSQUEBRAINDICEFIM", há grande chance de haver perda.</li>
+            </ul>
+    
+            <hr>
+    
+            <b>Relatório de Lixo Removido</b>
+            <ul>
+                <li><b>Objetivo:</b> Verificar o que foi cortado no caderno durante o processamento.</li>
+                <li><b>Causas comuns de cortes:</b>
+                    <ul>
+                        <li>Mudança de tamanho de página.</li>
+                        <li>Mudança de margem.</li>
+                        <li>Erro de conversão.</li>
+                        <li>Texto "fantasma" (duplicado e invisível no PDF).</li>
+                    </ul>
+                </li>
+                <li><b>Frequência de verificação:</b> Diariamente, com foco em cadernos que geralmente têm mais perdas.</li>
+                <li><b>Procedimento ao encontrar perda:</b>
+                    <ul>
+                        <li>Verifique se há cliente afetado.</li>
+                        <li>Se houver, inclua a matéria perdida e envie revisão.</li>
+                    </ul>
+                </li>
+                <li><b>Email final:</b> Informe o que foi feito no dia, incluindo horário, caderno e se houve perda.</li>
+                <li><b>Cadernos importantes para supervisão:</b>
+                    <ul>
+                        <li>OAB</li>
+                        <li>TJ</li>
+                        <li>TRT</li>
+                        <li>TCE</li>
+                        <li>TRF</li>
+                        <li>JFED</li>
+                    </ul>
+                </li>
+            </ul>
+            </div></div>
+    
+            <div class="faq-item">
+                <div class="faq-question">5. Plantão</div>
+                <div class="faq-answer">Procedimentos de como são feitos os cadernos do plantão
+    
+                    <br>
+    
+                    <ul>
+                        <li><b>DODF</b>
+                            <ul>
+                                <li>Excluir índices e olhar imagens.</li>
+                                <li>Conferência normal.</li>
+                                <li>Tribunal apenas seção 1, 2 e 3.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>TJBA</b>
+                            <ul>
+                                <li>Confere o CAD1 Todo (TRIB, VARAS e LINHAS SEM MARCAR).</li>
+                                <li>Olhar imagens.</li>
+                                <li>Arranca os BX e arruma os quadros que vem errado, desce para o final da página (olhar através do PDF para identificar o quadro).</li>
+                                <li>Conferência Normal.</li>
+                                <li>CAD2, 3, 4 e 5 confere TRIB e BX depois de processados e avisar no chat do plantão.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>ADMMG</b>
+                            <ul>
+                                <li>Olhar o número de páginas no rodapé da primeira página, abaixo da última página vai ter uns anexos.</li>
+                                <li>Pesquisar por 'final d' ou 'fim d' achar as matérias de cada anexo e recortar ela e colar no seu devido lugar.</li>
+                                <li>Olhar imagens e se precisar retirar alguma página avisar Jornais ou a Dani.</li>
+                                <li>Conferência normal.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>ALMG, IOF, JMILMG, PGJU E TREMG</b>
+                            <ul>
+                                <li>Conferência Normal.</li>
+                                <li>Olhar imagens.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>EDITAIS MG</b>
+                            <ul>
+                                <li>Conferência Normal.</li>
+                                <li>A Conferência é toda feita com a quebra de linhas.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>EXECMG</b>
+                            <ul>
+                                <li>Excluir índices.</li>
+                                <li>Olhar linhas sem marcar.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>DOMMG</b>
+                            <ul>
+                                <li>Excluir índices.</li>
+                                <li>Realçar MSSQUEBRAMATERIA e olhar matérias com mais de 1000 linhas.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>DOMBH</b>
+                            <ul>
+                                <li>Entra no site do DOMBH procurar as varas.</li>
+                                <li><b>SMPU - Secretaria Municipal de Política Urbana</b>
+                                    <ul>
+                                        <li>Procura os anexos que começam com COMUNICADO - EDITAL.</li>
+                                        <li>Copiar o anexo todo para o txt, substituir "INFRATOR" por MSSQUEBRAMATERIA((32132)) INFRATOR: " localizar o número do arquivo retirar a marcação de matéria acima e colar o anexo editado no txt do DOMBH depois de "CRITÉRIO:".</li>
+                                    </ul>
+                                </li>
+                                <li><b >SMOBI - Secretaria Municipal de Obras e Infraestrutura</b>
+                                    <ul>
+                                        <li>Procura os anexos que começam com COMUNICADO - EDITAL.</li>
+                                        <li>Abrir o anexo e procurar por “UNIAO BARAO OU UNIAO COMERCIAL BARAO”, se localizar cortar a linha que tem o cliente e copiar a pauta e colar no txt do DOMBH, colocar marcação de matéria.</li>
+                                        <li>Clicar em quebra de linhas e conferir se não tem matéria GG.</li>
+                                        <li>Se vier a vara sem o anexo favor avisar a Dani.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>DOMUNIRJ</b>
+                            <ul>
+                                <li>Conferência Normal.</li>
+                                <li>Atenção as páginas com quadros (Quase sempre vem erro de conversão).</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>LEGISRJ</b>
+                            <ul>
+                                <li>Excluir índices e olhar imagens.</li>
+                                <li>Conferência normal.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>DOMRJ</b>
+                            <ul>
+                                <li>Excluir índices.</li>
+                                <li>Substituir MSSNADA((54321)) por nada.</li>
+                                <li>Não deixar matéria na pauta.</li>
+                                <li>Matéria Decreto com quadro de anexo copiar pelo Okular.</li>
+                                <li>Letras todas maiúscula na linha de cima costuma ser pauta.</li>
+                                <li>Conferência Normal.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>EXECPE</b>
+                            <ul>
+                                <li>Excluir índices.</li>
+                                <li>Substituir MSSNADA((54321)) por nada.</li>
+                                <li>Copiar o primeiro tribunal do caderno e colocar marcação.</li>
+                                <li>Conferência Normal.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>EXECRJ</b>
+                            <ul>
+                                <li>Excluir os índices da primeira página.</li>
+                                <li>Substituir caracteres especiais no começo da página.</li>
+                                <li>Conferir pelo PDF quando vier uma matéria afetando mais de uma coluna olhar a ordem do marcado.</li>
+                                <li>Confere só as páginas do quadros (vem erro de conversão).</li>
+                                <li>Olhar vara que vier no começo da página também pelo PDF (sempre vem sem marcação).</li>
+                                <li>OBS: as matérias erradas no entorno e vistas em busca dos erros deverão ser arrumadas.</li>
+                                <li>Se houver matéria grande podem quebrar.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>EXECRJ EXTRA</b>
+                            <ul>
+                                <li>Confere todo.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>DORE E DORJ</b>
+                            <ul>
+                                <li>Excluir índices.</li>
+                                <li>Olhar o número de linhas.</li>
+                                <li>+ 8000 LINHAS – Confere so linhas sem marcar.</li>
+                                <li>- 8000 LINHAS – Confere ele todo.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>DOMASE, DOJPPB e TCEPR</b>
+                            <ul>
+                                <li>Roda o cad no Banguela, arruma as imagens e salva o PDF como pesquisável.</li>
+                                <li>Caso o cad venha grande pedir para rodar marcação e olhar matérias grandes.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>SEFAZPB</b>
+                            <ul>
+                                <li>Roda o cad no Banguela, arruma as imagens e salva o PDF como pesquisável.</li>
+                                <li>Roda Marcação e conferência normal.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>OAB's</b>
+                            <ul>
+                                <li>Conferência normal.</li>
+                                <li>Atenção as pautas normais e BX.</li>
+                            </ul>
+                        </li>
+                    
+                        <li ><b>DOCSP</b>
+                            <ul>
+                                <li>Olhar imagens e completar o txt.</li>
+                                <li>Conferência Normal (Matérias grandes).</li>
+                            </ul>
+                        </li>
+                    
+                        <li><b>TCESP</b>
+                            <ul>
+                                <li>Olhar nomes soltos e colados.</li>
+                                <li>Olhar imagens e completar o txt.</li>
+                                <li>Conferência Normal.</li>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                </div>
+                </div>
+    
+                </div>
+
+        
+    
+        <script src="/scripts.js"></script>
+    
+        <!-- Rodapé -->
+        <footer class="rodape">
+            © Desenvolvido por <strong>Laura Ribas Borba</strong>
+        </footer>
+    </body>
+    </html>
